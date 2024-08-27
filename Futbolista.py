@@ -1,5 +1,5 @@
-from Persona import Persona
-from Deportista import Deportista
+from persona import Persona
+from deportista import Deportista
 
 # Description: Clase que hereda de las clases Persona y Deportista, y que tiene como atributos propios los goles marcados, tarjetas rojas y pierna habil.
 class Futbolista(Persona, Deportista):
@@ -11,7 +11,7 @@ class Futbolista(Persona, Deportista):
         self._piernaHabil = piernaHabil
         Persona.__init__(self, nombre, edad, altura, sexo)
         Deportista.__init__(self, deporte, añosPracticando)
-        _listaFutbolistas.append(self)
+        Futbolista._listaFutbolistas.append(self)
         
     def getGolesMarcados(self):
         return self._golesMarcados
